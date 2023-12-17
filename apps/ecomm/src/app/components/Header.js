@@ -25,10 +25,6 @@ export default function Header(props) {
     },
   };
 
-  const handleChange = (event) => {
-    props.setSearch(event.target.value);
-  };
-
   return (
     <header>
       <div className="logo">
@@ -37,15 +33,12 @@ export default function Header(props) {
         </h1>
       </div>
 
-      <form action="#" autoComplete="off">
-        <input
-          type="text"
-          id="input-search"
-          name="search"
-          placeholder="Search..."
-          onChange={handleChange}
-        />
-      </form>
+      <input
+        type="text"
+        id="input-search"
+        name="search"
+        placeholder="Search..."
+      />
 
       <ul style={styles.styleMenu}>
         <li>

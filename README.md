@@ -10,7 +10,7 @@ This app demonstrates React security best practices to follow for secure coding.
 
 ### This repository is built using NX ecosystem which consist **ecomm** app inside apps folder.
 
-### Usage
+### Usage & local setup instructions
 
 ```bash
 
@@ -23,6 +23,8 @@ yarn
 yarn nx serve ecomm
 
 # browse the localhost url inside the browser
+
+http://localhost:4200/
 
 
 ```
