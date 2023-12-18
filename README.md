@@ -8,6 +8,8 @@ This app demonstrates React security best practices to follow for secure coding.
 
 - Implemented sanitization through DOMPurify and trusted type security measure.
 
+- Configured eslint-plugin-security linting to detect security issues through liniting.
+
 - Added CodeQL code scanning automated workflow to find security vulnerabilities and coding errors. [CodeQL WorkFlow](https://github.com/gaurav-js-dev/auth-react/actions/workflows/github-code-scanning/codeql)
 
 ### This repository is built using NX ecosystem which consist **ecomm** app inside apps folder.
