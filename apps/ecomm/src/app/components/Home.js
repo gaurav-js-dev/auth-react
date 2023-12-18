@@ -86,7 +86,9 @@ export default function Home() {
           <div
             className="rendered-content"
             dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(htmlContent),
+              __html: DOMPurify.sanitize(htmlContent, {
+                RETURN_TRUSTED_TYPE: true,
+              }),
             }}
           />
         </div>
