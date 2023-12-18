@@ -2,7 +2,8 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import SupportIcon from '@material-ui/icons/ContactSupport';
 import ShippingIcon from '@material-ui/icons/LocalShipping';
 import ReturnIcon from '@material-ui/icons/MonetizationOn';
-import React from 'react';
+import DOMPurify from 'dompurify';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -12,6 +13,12 @@ export default function Home() {
       height: 30,
       marginRight: 3,
     },
+  };
+
+  const [htmlContent, setHtmlContent] = useState('');
+
+  const handleInputChange = (event) => {
+    setHtmlContent(event.target.value);
   };
 
   return (
@@ -63,6 +70,25 @@ export default function Home() {
             We provide 24*7 Customer Care support for feedbacks, suggestions and
             complaints.
           </p>
+        </div>
+      </div>
+      <div className="html-preview">
+        <h1>Design your own print on product below</h1>
+        <div>
+          <textarea
+            value={htmlContent}
+            onChange={handleInputChange}
+            placeholder="Enter HTML text here to see live design preview on product"
+            rows="10"
+            cols="50"
+          />
+          <h2 className="preview-below">Design Preview Below</h2>
+          <div
+            className="rendered-content"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(htmlContent),
+            }}
+          />
         </div>
       </div>
     </section>

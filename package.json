@@ -43,6 +43,7 @@
     "bootstrap": "^5.3.2",
     "commitizen": "^4.2.6",
     "cz-conventional-changelog": "3.3.0",
+    "dompurify": "^3.0.6",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-import": "2.26.0",

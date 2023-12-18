@@ -7,7 +7,6 @@ export default function Products(props) {
   const value = useContext(DataContext);
   const [products] = value.products;
   const addCart = value.addCart;
-  const data = `lorem ipsum <img src="" onerror="alert('message');" />`;
 
   return (
     <section>
@@ -40,7 +39,6 @@ export default function Products(props) {
                 <button onClick={() => addCart(product.pid)}>
                   Add to Cart
                 </button>
-                <div dangerouslySetInnerHTML={{ __html: data }} />
               </div>
             </div>
           ))}
