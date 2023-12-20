@@ -8,6 +8,8 @@ This app demonstrates React security best practices to follow for secure coding.
 
 - Implemented sanitization through DOMPurify and trusted type security measure.
 
+- Snyk integration(globally) to Find and fix vulnerabilities in application code in real time.
+
 - Configured eslint-plugin-security linting to detect security issues through linting.
 
 - Added CodeQL code scanning automated workflow to find security vulnerabilities and coding errors. [CodeQL WorkFlow](https://github.com/gaurav-js-dev/auth-react/actions/workflows/github-code-scanning/codeql)
@@ -29,6 +31,16 @@ yarn nx serve ecomm
 # browse the localhost url inside the browser
 
 - Browse to http://localhost:4200/ to view app running in the browser.
+
+# To use Snyk CLI
+
+yarn global add snyk
+
+snyk auth
+
+# Scan your project, first cd inside a folder with a react project, then start the scan by running:
+
+snyk test
 
 ```
 
