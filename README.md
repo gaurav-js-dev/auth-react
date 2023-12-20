@@ -8,7 +8,9 @@ This app demonstrates React security best practices to follow for secure coding.
 
 - Implemented sanitization through DOMPurify and trusted type security measure.
 
-- Snyk integration(globally) to Find and fix vulnerabilities in application code in real time.
+- Snyk integration(globally) to Find and fix vulnerabilities in application code and dependencies in real time.
+
+- Added Synk CI/CD pipeline through Github workflow for code scan upon push along with configuring security alerts.
 
 - Configured eslint-plugin-security linting to detect security issues through linting.
 
@@ -16,29 +18,29 @@ This app demonstrates React security best practices to follow for secure coding.
 
 #### This repository is built using NX ecosystem which consist **ecomm** app inside apps folder.
 
-### Usage & local setup instructions
+### Usage & local setup instructions commands to follow
 
 ```bash
 
-## install the required node_modules dependencies
+1. Install the required node_modules dependencies
 
 yarn
 
-## start the local webserver
+2. Start the local webserver
 
 yarn nx serve ecomm
 
-# browse the localhost url inside the browser
+3. Browse the localhost url inside the browser
 
-- Browse to http://localhost:4200/ to view app running in the browser.
+- Open http://localhost:4200/ to view app running in the browser.
 
-# To use Snyk CLI
+4. To use Snyk CLI
 
 yarn global add snyk
 
 snyk auth
 
-# Scan your project, first cd inside a folder with a react project, then start the scan by running:
+5. Scan your project, first cd inside a folder with a react project, then start the scan by running:
 
 snyk test
 
